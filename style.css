@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.container {
+  width: 100%; /* Faz com que o container ocupe 100% */
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna (box e language) */
+  align-items: center; /* Alinha os itens ao centro */
+  padding: 10px; /* Adiciona um pouco de espaço nas laterais */
+}
+
+h1, h2, h3, h4, h5 {
+  color: #3d3d3d;
+  font-weight: 400;
+  margin: 0.5rem;
+}
+
+.box {
+  text-align: center;
+  background: #ffffff;
+  width: auto; /* Largura fixa */
+  height: auto; /* Altura fixa */
+  color: #939393;
+  padding: 2rem; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  display: block; /* Configura a box como um bloco para evitar desalinhamentos */
+  border: 2px groove #ebebeb62;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 0 auto; /* Centraliza horizontalmente em contextos de largura variável */
+  max-width: 370px;
+  margin-top: 20px;
+}
+
+.box a {
+  color: #2067ff;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+input.box {
+  margin-top: 10%;
+  width: 100%; /* Ajusta para preencher a largura do container pai */
+  padding: 12px; /* Mantém o espaçamento interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #333; /* Cor do texto */
+  outline: none; /* Remove o contorno padrão ao focar */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.box p {
+  color: #3d3d3d;
+  font-size: 11px; /* Tamanho do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+a {
+  text-decoration: none; /* Remove sublinhado padrão */
+}
+
+.button-container {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: space-between; /* Botões ficam nos extremos: esquerda e direita */
+  align-items: center; /* Alinha os botões verticalmente no centro */
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+}
+
+.sigin-buttom {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #2067ff;
+  font-size: 11px;
+}
+
+.prox-buttom {
+  background-color: #2067ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+}
+
+.language {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 60px;
+  display: flex;
+}
+
+.language span {
+  position: relative; /* Agora, depende do flex no botão */
+  display: flex; /* Garante que o ícone seja alinhado centralmente */
+  margin-top: -7px;
+  margin-left: 15px;
+  width: 20px; /* Tamanho do contêiner do ícone */
+  height: 20px; /* Tamanho do contêiner do ícone */
+}
+
+.down a {
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: left;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; /* Oculta a caixa padrão */
+}
+
+.custom-checkbox .checkmark {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 3px; /* Bordas arredondadas */
+  margin-right: 8px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #2067ff; /* Cor ao ser marcado */
+  border-color: #2067ff;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: 2px auto; /* Alinha o "check" no centro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Ajusta o container para telas menores */
+  .container {
+    padding: 10px; /* Reduz o padding para dispositivos móveis */
+  }
+
+  /* Ajusta a largura da box */
+  .box {
+    max-width: 90%; /* Faz a box ocupar 90% da largura da tela */
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  /* Ajusta o tamanho da fonte e dos botões */
+  .sigin-buttom, .prox-buttom {
+    font-size: 10px; /* Reduz o tamanho da fonte dos botões */
+  }
+
+  /* Reduz a largura das caixas de entrada */
+  input.box {
+    font-size: 12px; /* Reduz o tamanho da fonte nas entradas */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  .button-container {
+    flex-direction: column; /* Coloca os botões em coluna para telas pequenas */
+    align-items: center; /* Centraliza os botões */
+  }
+
+  .down {
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    margin-top: 10px;
+  }
+
+  .language {
+    margin-right: 0; /* Remove a margem à direita */
+    margin-top: 10px; /* Dá um pouco de espaçamento superior */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste extra para dispositivos com telas ainda menores */
+  .container {
+    padding: 5px; /* Menos padding em telas muito pequenas */
+  }
+
+  .box {
+    max-width: 100%; /* Box ocupa toda a largura */
+    padding: 0.8rem; /* Ajusta o padding */
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-size: 16px; /* Ajusta a fonte do título */
+  }
+
+  input.box {
+    font-size: 14px; /* Ajusta o tamanho da fonte nas entradas */
+  }
+}
